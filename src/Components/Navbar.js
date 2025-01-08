@@ -32,7 +32,7 @@ export const Navbar = ({ user }) => {
                 <span><Link to="/" className='navlink'>{user}</Link></span>
                 <span><Link to="cartproducts" className='navlink'><Icon icon={cart} size={26}/></Link></span>
                 <span className='no-of-products'>{totalQty}</span>
-                <span><button className='logout-btn' onClick={handleLogout}>Logout</button></span>
+                <span><button className='logout-btn' onClick={handleLogout}>LOGOUT</button></span>
             </div>}
         </div>
     )

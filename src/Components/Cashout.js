@@ -46,7 +46,7 @@ export const Cashout = (props) => {
             if (user) {
                 const date = new Date();
                 const time = date.getTime();
-                db.collection('Buyer-info ' + user.uid).doc('_' + time).set({
+                db.collection('Buyer-info').doc(time.toString()).set({
                     BuyerName: name,
                     BuyerEmail: email,
                     BuyerCell: cell,
@@ -73,23 +73,23 @@ export const Cashout = (props) => {
                 <br />
                 {successMsg && <div className='success-msg'>{successMsg}</div>}
                 <form autoComplete="off" className='form-group' onSubmit={cashoutSubmit}>
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name">Name:</label>
                     <input type="text" className='form-control' required
                         value={name} disabled />
                     <br />
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">Email:</label>
                     <input type="email" className='form-control' required
                         value={email} disabled />
                     <br />
-                    <label htmlFor="Cell No">Cell No</label>
+                    <label htmlFor="Cell No">Phone number:</label>
                     <input type="number" className='form-control' required
                         onChange={(e) => setCell(e.target.value)} value={cell} placeholder='+40 7XXXXXXXX' />
                     <br />
-                    <label htmlFor="Price To Pay">Price To Pay</label>
+                    <label htmlFor="Price To Pay">Total reservation price:</label>
                     <input type="text" className='form-control' required
                         value={`$ ${formatPrice(totalPrice)}`} disabled />
                     <br />
-                    <button type="submit" className='btn btn-success btn-md mybtn'>SUBMIT</button>
+                    <button type="submit" className='btn btn-success btn-md mybtn'>SUBMIT REQUEST</button>
                 </form>
                 {error && <span className='error-msg'>{error}</span>}
             </div>

@@ -312,3 +312,8 @@ h1 {
     font-weight: bold; 
     color: #333;
 }
+
+.half-br {
+    height: 0.5em; /* Adjust this value for more or less spacing */
+}
+  

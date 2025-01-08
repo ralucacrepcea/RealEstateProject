@@ -12,5 +12,12 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "functions": {
+    "runtime": "nodejs16",
+    "source": "functions",
+    "deployOptions": {
+      "useOldFunctionsFramework": true
+    }
   }
 }

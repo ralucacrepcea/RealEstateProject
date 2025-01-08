@@ -34,19 +34,19 @@ export const Signup = (props) => {
             <h1 className="centered-title">Create an account to use Real Estate Website</h1>
             <br />
             <form autoComplete="off" className='form-group' onSubmit={signup}>
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Name:</label>
                 <input type="text" className='form-control' required
                     onChange={(e) => setName(e.target.value)} value={name} />
                 <br />
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Email:</label>
                 <input type="email" className='form-control' required
                     onChange={(e) => setEmail(e.target.value)} value={email} />
                 <br />
-                <label htmlFor="passowrd">Password</label>
+                <label htmlFor="passowrd">Password:</label>
                 <input type="password" className='form-control' required
                     onChange={(e) => setPassword(e.target.value)} value={password} />
                 <br />
-                <button type="submit" className='btn btn-success btn-md mybtn'>SUBMIT</button>
+                <button type="submit" className='btn btn-success btn-md mybtn'>REGISTER</button>
             </form>
             {error && <span className='error-msg'>{error}</span>}
             <br />
